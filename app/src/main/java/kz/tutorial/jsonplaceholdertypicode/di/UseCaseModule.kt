@@ -1,5 +1,7 @@
 package kz.tutorial.jsonplaceholdertypicode.di
 
+import kz.tutorial.jsonplaceholdertypicode.data.use_case.GetAlbumsUseCaseImpl
+import kz.tutorial.jsonplaceholdertypicode.data.use_case.GetPhotoUseCaseImpl
 import kz.tutorial.jsonplaceholdertypicode.data.use_case.GetPostPreviewCommentsUseCaseImpl
 import kz.tutorial.jsonplaceholdertypicode.data.use_case.GetPostUseCaseImpl
 import kz.tutorial.jsonplaceholdertypicode.data.use_case.GetPostsUseCaseImpl
@@ -17,6 +19,6 @@ val useCaseModule = module {
     factory<GetPostUseCase> { GetPostUseCaseImpl(get()) }
     factory<GetPostPreviewCommentsUseCase> { GetPostPreviewCommentsUseCaseImpl(get()) }
     factory<GetUserUseCase> { GetUserUseCaseImpl(get()) }
-    factory<GetAlbumsUseCase> { GetAlbumsUseCase(get()) }
-    factory<GetPhotosUseCase> { GetPhotosUseCase(get()) }
+    factory<GetAlbumsUseCase> { GetAlbumsUseCaseImpl(get()) }
+    factory<GetPhotosUseCase> { GetPhotoUseCaseImpl(get()) }
 }
